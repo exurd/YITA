@@ -11,9 +11,9 @@ function extractVideoId(url) {
 function resetExtensionIcon() {
     chrome.action.setIcon({
         path: {
-            "16": "icon16.png",
-            "48": "icon48.png",
-            "128": "icon128.png"
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
         }
     });
 }
@@ -26,17 +26,17 @@ function checkRedirectUrlAvailability(videoId) {
             if (response.ok) {
                 chrome.action.setIcon({
                     path: {
-                        "16": "icon16-green.png",
-                        "48": "icon48-green.png",
-                        "128": "icon128-green.png"
+                        "16": "icons/icon16-green.png",
+                        "48": "icons/icon48-green.png",
+                        "128": "icons/icon128-green.png"
                     }
                 });
             } else {
                 chrome.action.setIcon({
                     path: {
-                        "16": "icon16-red.png",
-                        "48": "icon48-red.png",
-                        "128": "icon128-red.png"
+                        "16": "icons/icon16-red.png",
+                        "48": "icons/icon48-red.png",
+                        "128": "icons/icon128-red.png"
                     }
                 });
             }
@@ -49,7 +49,7 @@ function checkRedirectUrlAvailability(videoId) {
 chrome.runtime.onInstalled.addListener(({ reason }) => {
     if (reason === 'install') {
         chrome.tabs.create({
-            url: "onboarding.html"
+            url: "onInstall/onInstall.html"
         });
     }
 });
