@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Into The Archive (YITA)",
+  "version": "1.0",
+  "description": "Finds YouTube videos on Internet Archive for easy redirection",
+  "permissions": [
+    "activeTab"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_security_policy": {},
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://archive.org/*"
+  ]
+}
